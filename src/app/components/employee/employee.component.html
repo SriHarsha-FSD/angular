@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Employee Details </h1>
+    <ul *ngFor="let emp of employeeList">
+        <li>{{emp.name}}</li>
+        <li>{{emp.email}}</li>
+        <li>
+            <ul *ngFor="let skill of emp.skills">
+                <li>{{skill.skill}}</li>
+                <li>{{skill.exp}}</li>
+            </ul>
+        </li>
+
+    </ul>
+</div>>

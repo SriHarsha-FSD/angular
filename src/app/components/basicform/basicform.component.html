@@ -1,0 +1,28 @@
+
+<div>
+    <div class="container">
+        <h1>Basic form to collect and display data</h1>
+        <form>
+            <fieldset [disabled]="isDisabled" class="">
+                <legend>Basic Details</legend>
+                <label>First Name:</label>
+                <input type="text" placeholder="Sri Harsha" [(ngModel)]="firstName" [disabled]="isDisabled" class="form-control">
+                <label>Last Name:</label>
+                <input type="text" placeholder="T" [(ngModel)]="lastName" [disabled]="isDisabled" class="form-control">
+                <label>Email:</label>
+                <input type="email:" placeholder="abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="email" [disabled]="isDisabled" class="form-control">
+                <label>Mobile No:</label>
+                <input type="text" placeholder="9234000887" [(ngModel)]="mobileNo" [disabled]="isDisabled" class="form-control"><br>
+                <button (click)="submitMe()"  class="btn btn-primary">Submit</button>  
+            </fieldset> 
+        </form>
+        <br> <br>
+        <p>You have submitted the below details:</p>
+        <ol>
+            <li>{{firstName}}</li>
+            <li>{{lastName}}</li>
+            <li>{{email}}</li>
+            <li>{{mobileNo}}</li>
+        </ol>
+    </div>
+</div>
