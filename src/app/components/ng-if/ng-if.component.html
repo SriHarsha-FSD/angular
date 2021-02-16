@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>NGIf Directive</h1>
+    <input type="checkbox" [(ngModel)]="show">
+    <div *ngIf="show">Show is true</div>
+    <br>
+    <p [hidden]="show">
+        Show is false using hidden element
+    </p>
+    <br>
+    <p [hidden]="!show">
+        Negation of hidden element
+    </p>
+    <div *ngIf="show; else display">
+        display blk - Lorem ipsum dolor sit amet.
+    </div>
+    <ng-template #display>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nobis nisi consequuntur harum exercitationem ratione.
+    </ng-template>
+
+    <div *ngIf="show then thenBlock else display">
+        This is Div
+    </div>
+    <ng-template #thenBlock> 
+        then blk - Lorem ipsum dolor sit amet.
+    </ng-template>
+
+    <ng-template #elseBlock>
+        else blk - Lorem ipsum dolor sit amet.
+    </ng-template>
+
+</div>

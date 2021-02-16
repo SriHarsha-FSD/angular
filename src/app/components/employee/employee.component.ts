@@ -6,38 +6,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+
   employeeList = [
     {
-      name: "Sree",
-      email: "Sree@gmail.com",
-      skills:[
+      name: 'Srujana',
+      email: 'srujana@ef.com',
+      skills: [
         {
-        skill : 'progress',
-        exp : '5 years' 
+          skill : 'Java',
+          exp: '5years'
         }
       ]
     },
     {
-      name: "sai",
-      email: "Sai@gmail.com",
-      skills:[
+      name: 'Gurunag',
+      email: 'guru@ef.com',
+      skills: [
         {
-        skill : 'jewellery',
-        exp : '1 year' 
+          skill : 'C#',
+          exp: '6years'
         }
       ]
     },
     {
-      name: "Hanumanthu",
-      email: "hanu@gmail.com",
-      skills:[
+      name: 'Harsha',
+      email: 'harsha@ef.com',
+      skills: [
         {
-        skill : 'LVA',
-        exp : '30 years' 
+          skill : 'Python',
+          exp: '4years'
         }
       ]
     },
+    {
+      name: 'Anand',
+      email: 'anand@ef.com',
+      skills: [
+        {
+          skill : 'NodeJs',
+          exp: '3years'
+        }
+      ]
+    }
   ]
+
   constructor() { }
 
   ngOnInit(): void {

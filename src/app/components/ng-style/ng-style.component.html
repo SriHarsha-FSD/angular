@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>using ngStyle</h1>
+    <br>
+    <div [ngStyle]="{'color': 'red', 'font-size': '40px'}">
+        This text is using ngStyle
+
+    </div>
+    <br>
+    <h1>using ngStyle dynamically</h1>
+    <br>
+    <div [ngStyle]="{'color': 'textColor'}">
+        This text is using ngStyle dynamically
+
+    </div>
+    <br>
+    <h1>using Terenary operator and multiple attributes</h1>
+    <br>
+    <div [ngStyle]="{'background-color':status === 'error'? 'red':'green', 'color':status === 'error'? 'white':'black', 'font-weight': 'bold'}">
+        This text is using ngStyle and background-color
+
+    </div>
+    
+    
+
+    
+</div>

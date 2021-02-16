@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <p>Unformatted Date: {{toDate}}</p>
+    <p>Formatted Date: {{toDate | date}}</p>
+    <p>Medium Formatted Date: {{toDate | date : 'medium'}}</p>
+    <p>short Formatted Date: {{toDate | date : 'short'}}</p>
+    <p>For more date attributes: <a href="https://angular.io/api/common/DatePipe" target="_blank">Date pipes</a></p>
+    <br>
+    <h1>{{titleCase}}</h1>
+    <p>UpperCase: {{message | uppercase}}</p>
+    <p>LowerCase: {{message | lowercase}}</p>
+    <br>
+    <h1>{{titleSlice}}</h1>
+    <p>CompleteString: {{messageSlice}}</p>
+    <p>SlicedString: <b>{{messageSlice | slice : 10:20 }}</b></p>
+    <br>
+    <h1>{{titleDecimal}}</h1>
+    <p>Unformatted decimalvalue: {{decValue}}</p>
+    <p>Formatted decimalvalue: {{decValue | number}}</p>
+    <br>
+    <h1>Custom pipes</h1>
+    <p>Formatted Indian Currency: {{indianCurrency | currencyIndia}}</p>
+    <br>
+    <p>Name: {{"Sree" | gender : 'male'}}</p>
+    <p>Name: {{"Siri" | gender : 'female'}}</p>
+<br><br><br><br><br>
+</div>                           

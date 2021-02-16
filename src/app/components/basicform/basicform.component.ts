@@ -12,14 +12,16 @@ export class BasicformComponent implements OnInit {
   email="";
   mobileNo="";
   isDisabled=false;
+  show=false;
 
   submitMe(){
     
-    this.firstName ;
+    this.firstName;
     this.lastName ;
     this.email;
     this.mobileNo;
     this.isDisabled=true;
+    this.show = true;
     
   }
 

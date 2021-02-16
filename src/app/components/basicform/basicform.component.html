@@ -6,23 +6,25 @@
             <fieldset [disabled]="isDisabled" class="">
                 <legend>Basic Details</legend>
                 <label>First Name:</label>
-                <input type="text" placeholder="Sri Harsha" [(ngModel)]="firstName" [disabled]="isDisabled" class="form-control">
+                <input type="text" placeholder="Sri Harsha" [(ngModel)]="firstName" [disabled]="isDisabled" class="form-control" name="first">
                 <label>Last Name:</label>
-                <input type="text" placeholder="T" [(ngModel)]="lastName" [disabled]="isDisabled" class="form-control">
+                <input type="text" placeholder="T" [(ngModel)]="lastName" [disabled]="isDisabled" class="form-control" name="lastName">
                 <label>Email:</label>
-                <input type="email:" placeholder="abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="email" [disabled]="isDisabled" class="form-control">
+                <input type="email:" placeholder="abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="email" [disabled]="isDisabled" class="form-control" name="email">
                 <label>Mobile No:</label>
-                <input type="text" placeholder="9234000887" [(ngModel)]="mobileNo" [disabled]="isDisabled" class="form-control"><br>
+                <input type="text" placeholder="9234000887" [(ngModel)]="mobileNo" [disabled]="isDisabled" class="form-control" name="mobile"><br>
                 <button (click)="submitMe()"  class="btn btn-primary">Submit</button>  
             </fieldset> 
         </form>
         <br> <br>
-        <p>You have submitted the below details:</p>
-        <ol>
-            <li>{{firstName}}</li>
-            <li>{{lastName}}</li>
-            <li>{{email}}</li>
-            <li>{{mobileNo}}</li>
-        </ol>
+        <div *ngIf="show">
+            <p>You have submitted the below details:</p> 
+            <ol>
+                <li>{{firstName}}</li>
+                <li>{{lastName}}</li>
+                <li>{{email}}</li>
+                <li>{{mobileNo}}</li>
+            </ol>
+        </div>
     </div>
 </div>

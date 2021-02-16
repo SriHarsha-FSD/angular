@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>NgSwitch example</h1>
+    <div [ngSwitch]="num">
+        <div *ngSwitchcase="1">One</div>
+        <div *ngSwitchcase="2">Two</div>
+        <div *ngSwitchcase="3">Three</div>
+        <div *ngSwitchDefault>This is default</div>
+    </div>
+    <br>
+    <input type="text" [(ngModel)]="num">
+</div>
